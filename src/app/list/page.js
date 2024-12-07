@@ -1,6 +1,10 @@
 import CardComponent from '@/components/CardComponent'
+import profileData from '../../../data/profileData'
+import Link from 'next/link'
 
 export default function List () {
+  const data = profileData;
+
   return (
     <>
       <div className='min-h-screen py-8'>
@@ -11,46 +15,31 @@ export default function List () {
             Discover the amazing things people are building
           </p>
         </div>
-
         {/* Cards Section */}
-        <div className='flex flex-wrap justify-center lg:mx-20 px-4'>
-          <CardComponent
-            bannerImage='https://via.placeholder.com/100x100'
-            profileImage='https://via.placeholder.com/150'
-            name='first name'
-            buildingInfo='Building ABC'
-            content='John Doe is building something amazing here.'
-          />
-          <CardComponent
-            bannerImage='https://via.placeholder.com/100x100'
-            profileImage='https://via.placeholder.com/150'
-            name='first name'
-            buildingInfo='Building XYZ'
-            content='Jane Smith is working on an awesome project.'
-          />
-          <CardComponent
-            bannerImage='https://via.placeholder.com/100x100'
-            profileImage='https://via.placeholder.com/150'
-            name='first name'
-            buildingInfo='Building DEF'
-            content="Alex Johnson's project is revolutionary."
-          />
-          <CardComponent
-            bannerImage='https://via.placeholder.com/100x100'
-            profileImage='https://via.placeholder.com/150'
-            name='first name'
-            buildingInfo='Building GHI'
-            content='Emily Davis is changing the game.'
-          />
-          <CardComponent
-            bannerImage='https://via.placeholder.com/100x100'
-            profileImage='https://via.placeholder.com/150'
-            name='first name'
-            buildingInfo='Building JKL'
-            content='Chris Brown is crafting something unique.'
-          />
-        </div>
+        <CardSection data={data}/>
       </div>
     </>
   )
 }
+
+function CardSection({ data }) {
+    return (
+      <div className='flex flex-wrap justify-center lg:mx-20 px-4'>
+        {data.map(personDetails => {
+          return (
+            <div key={personDetails.key}>
+              <Link href={`/list/${personDetails.slug}`}>
+                  <CardComponent
+                    name={personDetails.name}
+                    buildingInfo={personDetails.buildingInfo}
+                    cardSubContent={personDetails.cardSubContent}
+                    bannerImage={personDetails.bannerImage}
+                    profileImage={personDetails.profileImage}
+                  />
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
