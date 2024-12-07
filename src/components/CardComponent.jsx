@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const CardComponent = ({ name, buildingInfo, cardSubContent, bannerImage, profileImage }) => {
   return (
@@ -6,7 +7,9 @@ const CardComponent = ({ name, buildingInfo, cardSubContent, bannerImage, profil
       {/* Banner */}
       <div className="h-24 bg-red-300">
         {bannerImage && (
-          <img
+          <Image
+            width="500"
+            height="500"
             src={bannerImage}
             alt="Banner"
             className="h-full w-full object-cover"
@@ -19,7 +22,9 @@ const CardComponent = ({ name, buildingInfo, cardSubContent, bannerImage, profil
         {/* Profile Picture */}
         <div className="w-20 h-20 mx-auto rounded-full border-4 border-white bg-gray-100">
           {profileImage ? (
-            <img
+            <Image
+              width="500"
+              height="500"
               src={profileImage}
               alt="Profile"
               className="w-full h-full object-cover rounded-full"

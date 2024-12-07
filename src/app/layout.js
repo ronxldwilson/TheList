@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 
 const geistSans = localFont({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
+        <Analytics />
       </body>
     </html>
   );
