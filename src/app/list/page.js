@@ -3,32 +3,37 @@ import profileData from '../../../data/profileData'
 import Link from 'next/link'
 
 export default function List () {
-  const data = profileData;
+  const data = profileData
 
   return (
     <>
-      <div className='min-h-screen py-8'>
-        {/* Header Section */}
-        <div className='text-center mb-8'>
-          <h1 className='text-3xl font-bold text-gray-800'>The List</h1>
-          <p className='text-gray-600 mt-2'>
-            Discover the amazing things people are building
-          </p>
+      <div className='min-h-screen flex items-center justify-center relative bg-gradient-to-br from-indigo-400 via-pink-300 to-violet-400'>
+        <div className='absolute inset-0 bg-white opacity-20 mix-blend-overlay'></div>
+        <div className='relative z-10'>
+          {/* Header Section */}
+          <div className='text-center mb-8'>
+            <h1 className='text-3xl md:text-4xl mt-5 font-bold text-gray-800'>The List</h1>
+            <p className='text-gray-600 text-xl md:text-xl mt-2'>
+              Discover the amazing things people are building
+            </p>
+          </div>
+          {/* Cards Section */}
+          <CardSection data={data} />
         </div>
-        {/* Cards Section */}
-        <CardSection data={data}/>
       </div>
     </>
   )
 }
 
-function CardSection({ data }) {
-    return (
-      <div className='flex flex-wrap justify-center lg:mx-20 px-4'>
-        {data.map(personDetails => {
-          return (
-            <div key={personDetails.key}>
-              <Link href={`/list/${personDetails.slug}`}>
+function CardSection ({ data }) {
+  return (
+    <>
+      <div className=''>
+        <div className='flex flex-wrap justify-center lg:mx-20 md:px-4'>
+          {data.map(personDetails => {
+            return (
+              <div key={personDetails.key}>
+                <Link href={`/list/${personDetails.slug}`}>
                   <CardComponent
                     name={personDetails.name}
                     buildingInfo={personDetails.buildingInfo}
@@ -36,10 +41,12 @@ function CardSection({ data }) {
                     bannerImage={personDetails.bannerImage}
                     profileImage={personDetails.profileImage}
                   />
-              </Link>
-            </div>
-          );
-        })}
+                </Link>
+              </div>
+            )
+          })}
+        </div>
       </div>
-    );
-  }
+    </>
+  )
+}
