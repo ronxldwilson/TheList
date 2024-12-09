@@ -1,6 +1,7 @@
 import CardComponent from '@/components/CardComponent'
 import profileData from '../../../data/profileData'
 import Link from 'next/link'
+import Drawer from '@/components/Drawer'
 
 export default function List () {
   const data = profileData
@@ -10,6 +11,7 @@ export default function List () {
       <div className='min-h-screen flex items-center justify-center relative bg-gradient-to-br from-indigo-400 via-pink-300 to-violet-400'>
         <div className='absolute inset-0 bg-white opacity-20 mix-blend-overlay'></div>
         <div className='relative z-10'>
+          <Drawer/>
           {/* Header Section */}
           <div className='text-center mb-8'>
             <h1 className='text-3xl md:text-4xl mt-5 font-bold text-gray-800'>The List</h1>
