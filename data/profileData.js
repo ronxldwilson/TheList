@@ -22,7 +22,9 @@ const profileData = [
             facebook:"Lorem Ipsum",
             instagram:"Lorem Ipsum",
             whatsapp:"Lorem Ipsum",
+
         },
+        money_recieved_till_today: "",
     }
   },{
     key: 2,
@@ -47,7 +49,9 @@ const profileData = [
             facebook:"Lorem Ipsum",
             instagram:"Lorem Ipsum",
             whatsapp:"Lorem Ipsum",
+
         },
+        money_recieved_till_today: "",
     }
   },{
     key: 3,
@@ -72,7 +76,9 @@ const profileData = [
             facebook:"Lorem Ipsum",
             instagram:"Lorem Ipsum",
             whatsapp:"Lorem Ipsum",
+
         },
+        money_recieved_till_today: "",
     }
   },{
     key: 4,
@@ -97,7 +103,9 @@ const profileData = [
             facebook:"Lorem Ipsum",
             instagram:"Lorem Ipsum",
             whatsapp:"Lorem Ipsum",
+
         },
+        money_recieved_till_today: "",
     }
   },{
     key: 5,
@@ -122,7 +130,9 @@ const profileData = [
             facebook:"Lorem Ipsum",
             instagram:"Lorem Ipsum",
             whatsapp:"Lorem Ipsum",
+
         },
+        money_recieved_till_today: "",
     }
   },{
     key: 6,
@@ -147,7 +157,9 @@ const profileData = [
             facebook:"Lorem Ipsum",
             instagram:"Lorem Ipsum",
             whatsapp:"Lorem Ipsum",
+
         },
+        money_recieved_till_today: "",
     }
   }
 ]
