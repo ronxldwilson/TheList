@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import Link from "next/link";
 
 export default function Drawer() {
     const [isOpen, setIsOpen] = useState(false);
@@ -38,19 +39,19 @@ export default function Drawer() {
                 <nav className="p-4 text-black">
                     <ul>
                         <li className=" text-2xl my-2">
-                            <a href="/" className="hover:underline">
+                            <Link href="/list" className="hover:underline">
                                 The List
-                            </a>
+                            </Link>
                         </li>
                         <li className=" text-2xl my-2">
-                            <a href="https://tally.so/r/wAWvqe" className="hover:underline">
+                            <Link href="https://tally.so/r/wAWvqe" className="hover:underline">
                                 Join the List
-                            </a>
+                            </Link>
                         </li>
                         <li className=" text-2xl my-2">
-                            <a href="/newsletter" className="hover:underline">
+                            <Link href="/newsletter" className="hover:underline">
                                 Newsletter
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
