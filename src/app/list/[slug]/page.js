@@ -14,8 +14,6 @@ import { CgMail } from 'react-icons/cg'
 
 import { useParams } from 'next/navigation' // Use the new hook for `params`
 import profileData from '../../../../data/profileData'
-import { fromJSON } from 'postcss'
-import { IconsManifest } from 'react-icons'
 
 export default function PersonPage () {
   const params = useParams() // Use the hook to get params
@@ -30,9 +28,7 @@ export default function PersonPage () {
   if (!slug) {
     return (
       <div className='flex items-center justify-center min-h-screen bg-gray-100'>
-        <div className='animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-solid'
-          Loading
-        ></div>
+        <div className='animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-solid'></div>
       </div>
     )
   }
@@ -84,9 +80,12 @@ export default function PersonPage () {
               />
             </div>
             {/* Fund Button */}
-            <button className='bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105'>
-              Fund
-            </button>
+            <Link
+              href={person.pageContent.funding_link}
+              className='bg-gradient-to-r from-green-500 to-emerald-600 text-white py-3 px-8 rounded-full shadow-lg transform transition-transform hover:scale-105 hover:from-green-600 hover:to-emerald-700'
+            >
+              Fund Now
+            </Link>
           </div>
         </div>
 
@@ -102,39 +101,35 @@ export default function PersonPage () {
               <h3 className='text-xl font-semibold text-gray-800'>
                 About the Product
               </h3>
-              <p className='text-gray-600'>
-                {person.pageContent.about_the_product}
-              </p>
+              <p
+                className='text-gray-600'
+                dangerouslySetInnerHTML={{
+                  __html: person.pageContent.about_the_product
+                }}
+              ></p>
             </div>
             <div>
               <h3 className='text-xl font-semibold text-gray-800'>
                 How the Money Will Be Used
               </h3>
-              <p className='text-gray-600'>
-                {person.pageContent.how_will_funds_be_used}
-              </p>
+              <p
+                className='text-gray-600'
+                dangerouslySetInnerHTML={{
+                  __html: person.pageContent.how_will_funds_be_used
+                }}
+              ></p>
             </div>
-            <div>
-              <h3 className='text-xl font-semibold text-gray-800'>
-                Why to Back Them
-              </h3>
-              <p className='text-gray-600'>
-                {person.pageContent.why_to_back_them}
-              </p>
-            </div>
+
             <div>
               <h3 className='text-xl font-semibold text-gray-800'>
                 About Them
               </h3>
-              <p className='text-gray-600'>{person.pageContent.about_them}</p>
-            </div>
-            <div>
-              <h3 className='text-xl font-semibold text-gray-800'>
-                How to Reach Out
-              </h3>
-              <p className='text-gray-600'>
-                {person.pageContent.how_to_reach_out}
-              </p>
+              <p
+                className='text-gray-600'
+                dangerouslySetInnerHTML={{
+                  __html: person.pageContent.about_them
+                }}
+              ></p>
             </div>
 
             <div>
@@ -167,9 +162,9 @@ export default function PersonPage () {
         <div className='px-6 py-4 m-3 text-center'>
           <Link
             href={person.pageContent.funding_link}
-            className='bg-red-600 text-white py-2 px-6 rounded-full hover:bg-red-700'
+            className='bg-gradient-to-r from-green-500 to-emerald-600 text-white py-3 px-8 rounded-full shadow-lg transform transition-transform hover:scale-105 hover:from-green-600 hover:to-emerald-700'
           >
-            Fund
+            Fund Now
           </Link>
         </div>
       </div>

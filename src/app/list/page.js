@@ -10,17 +10,21 @@ export default function List () {
     <>
       <div className='min-h-screen flex items-center justify-center relative bg-gradient-to-br from-indigo-400 via-pink-300 to-violet-400'>
         <div className='absolute inset-0 bg-white opacity-20 mix-blend-overlay'></div>
+        <Drawer />
         <div className='relative z-10'>
-          <Drawer/>
-          {/* Header Section */}
-          <div className='text-center mb-8'>
-            <h1 className='text-3xl md:text-4xl mt-5 font-bold text-gray-800'>The List</h1>
-            <p className='text-gray-600 text-xl md:text-xl mt-2'>
-              Discover the amazing things people are building
-            </p>
+          <div className='bg-white m-10 rounded-lg p-10'>
+            {/* Header Section */}
+            <div className='text-center mb-8'>
+              <h1 className='text-3xl md:text-4xl mt-5 font-bold text-gray-800'>
+                The List
+              </h1>
+              <p className='text-gray-600 text-xl md:text-xl mt-2'>
+                Discover the amazing ideas people are building
+              </p>
+            </div>
+            {/* Cards Section */}
+            <CardSection data={data} />
           </div>
-          {/* Cards Section */}
-          <CardSection data={data} />
         </div>
       </div>
     </>

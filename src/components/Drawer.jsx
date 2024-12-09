@@ -10,7 +10,7 @@ export default function Drawer() {
     const toggleDrawer = () => setIsOpen(!isOpen);
 
     return (
-        <div>
+        <div className="absolute top-0 left-0">
             {/* Button to open the drawer */}
             <button
                 className="p-2 bg-blue-500 text-white rounded"
