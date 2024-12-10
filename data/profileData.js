@@ -77,7 +77,7 @@ const profileData = [
         'Magna eiusmod duis ut aute cillum irure ipsum Lorem aute laborum nostrud cillum irure. Tempor cillum dolore officia nisi non eu anim pariatur ex. Irure elit nostrud enim fugiat cupidatat. Proident dolor ex veniam cupidatat sit excepteur veniam consectetur. Anim minim laboris occaecat veniam excepteur pariatur magna anim dolore id dolor veniam quis. Voluptate laborum quis cillum dolore.',
       about_them:
         'Magna eiusmod duis ut aute cillum irure ipsum Lorem aute laborum nostrud cillum irure. Tempor cillum dolore officia nisi non eu anim pariatur ex. Irure elit nostrud enim fugiat cupidatat. Proident dolor ex veniam cupidatat sit excepteur veniam consectetur. Anim minim laboris occaecat veniam excepteur pariatur magna anim dolore id dolor veniam quis. Voluptate laborum quis cillum dolore.',
-      funding_link: '',
+      funding_link: 'https://tally.so/r/wAWvqe',
       socialLinks: {
         linkedin: 'Lorem Ipsum',
         mail: 'Lorem Ipsum',
