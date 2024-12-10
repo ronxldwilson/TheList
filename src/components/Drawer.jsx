@@ -13,7 +13,7 @@ export default function Drawer() {
         <div className="absolute top-0 left-0 z-50">
             {/* Button to open the drawer */}
             <button
-                className="p-2 bg-blue-500 text-white rounded"
+                className="p-2 bg-white m-1 text-black rounded"
                 onClick={toggleDrawer}
             >
                 <div className="flex items-center">
