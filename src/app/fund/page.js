@@ -39,7 +39,7 @@ function CardSection ({ data }) {
           {data.map(personDetails => {
             return (
               <div key={personDetails.key}>
-                <Link href={`/list/${personDetails.slug}`}>
+                <Link href={`/fund/${personDetails.slug}`}>
                   <CardComponent
                     name={personDetails.name}
                     buildingInfo={personDetails.buildingInfo}

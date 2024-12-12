@@ -10,7 +10,7 @@ export default function Drawer() {
     const toggleDrawer = () => setIsOpen(!isOpen);
 
     return (
-        <div className="absolute top-0 left-0 z-50">
+        <div className="absolute top-0 left-0 z-50 shadow-sm">
             {/* Button to open the drawer */}
             <button
                 className="p-2 bg-white m-1 text-black rounded"
@@ -27,28 +27,43 @@ export default function Drawer() {
 
             {/* Drawer */}
             <div
-                className={`fixed top-0 left-0 h-full z-30 bg-gray-200 text-white transition-transform ${isOpen ? "translate-x-0" : "-translate-x-full"
+                className={`fixed top-0 left-0 h-full z-30 bg-gray-100 text-white transition-transform ${isOpen ? "translate-x-0" : "-translate-x-full"
                     } w-64 shadow-lg`}
             >
                 <button
-                    className="absolute top-4 right-4 p-2 bg-red-500 rounded"
+                    className="absolute top-4 right-4 p-2 bg-red-500 rounded shadow-lg"
                     onClick={toggleDrawer}
                 >
-                    <IoClose/>
+                    <IoClose />
                 </button>
                 <nav className="p-4 text-black">
                     <ul>
-                        <li className=" text-2xl my-2">
-                            <Link href="/list" className="hover:underline">
-                                The List
+                        <li className=" text-xl my-2">
+                            <Link href="/" className="hover:underline">
+                                Home
                             </Link>
                         </li>
-                        <li className=" text-2xl my-2">
+                        <li className=" text-xl my-2">
+                            <Link href="/discover" className="hover:underline">
+                                Discover
+                            </Link>
+                        </li>
+                        <li className=" text-xl my-2">
+                            <Link href="/fund" className="hover:underline">
+                                Fund/Support
+                            </Link>
+                        </li>
+                        <li className=" text-xl my-2">
+                            <Link href="/fund" className="hover:underline">
+                                Hire Talent
+                            </Link>
+                        </li>
+                        <li className=" text-xl my-2">
                             <Link href="https://tally.so/r/wAWvqe" className="hover:underline">
                                 Join the List
                             </Link>
                         </li>
-                        <li className=" text-2xl my-2">
+                        <li className=" text-xl my-2">
                             <Link href="/newsletter" className="hover:underline">
                                 Newsletter
                             </Link>
