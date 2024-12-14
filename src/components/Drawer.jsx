@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
@@ -10,64 +10,48 @@ export default function Drawer() {
     const toggleDrawer = () => setIsOpen(!isOpen);
 
     return (
-        <div className="absolute top-0 left-0 z-50 shadow-sm">
+        <div className="absolute top-0 left-0 z-50">
             {/* Button to open the drawer */}
             <button
-                className="p-2 bg-white m-1 text-black rounded"
+                className="p-2 bg-slate-50 m-2 text-slate-700 rounded shadow-md hover:bg-slate-100 transition"
                 onClick={toggleDrawer}
             >
                 <div className="flex items-center">
-
-                    <GiHamburgerMenu />
-                    {/* <span className="px-2">
-                        Resources
-                    </span> */}
+                    <GiHamburgerMenu size={20} />
                 </div>
             </button>
 
             {/* Drawer */}
             <div
-                className={`fixed top-0 left-0 h-full z-30 bg-gray-100 text-white transition-transform ${isOpen ? "translate-x-0" : "-translate-x-full"
-                    } w-64 shadow-lg`}
+                className={`fixed top-0 left-0 h-full z-30 bg-gradient-to-b from-gray-800 to-gray-900 text-white transition-transform ${
+                    isOpen ? "translate-x-0" : "-translate-x-full"
+                } w-64 shadow-xl`}
             >
                 <button
-                    className="absolute top-4 right-4 p-2 bg-red-500 rounded shadow-lg"
+                    className="absolute top-4 right-4 p-2 bg-red-500 rounded-full shadow-lg hover:bg-red-600 transition"
                     onClick={toggleDrawer}
                 >
-                    <IoClose />
+                    <IoClose size={20} />
                 </button>
-                <nav className="p-4 text-black">
+                <nav className="p-6">
                     <ul>
-                        <li className=" text-xl my-2">
-                            <Link href="/" className="hover:underline">
-                                Home
-                            </Link>
-                        </li>
-                        <li className=" text-xl my-2">
-                            <Link href="/discover" className="hover:underline">
-                                Discover
-                            </Link>
-                        </li>
-                        <li className=" text-xl my-2">
-                            <Link href="/fund" className="hover:underline">
-                                Fund/Support
-                            </Link>
-                        </li>
-                        <li className=" text-xl my-2">
-                            <Link href="/fund" className="hover:underline">
-                                Hire Talent
-                            </Link>
-                        </li>
-                        <li className=" text-xl my-2">
-                            <Link href="https://tally.so/r/wAWvqe" className="hover:underline">
-                                Join the List
-                            </Link>
-                        </li>
-                        <li className=" text-xl my-2">
-                            <Link href="/newsletter" className="hover:underline">
-                                Newsletter
-                            </Link>
-                        </li>
+                        {[
+                            { href: "/", label: "Home" },
+                            { href: "/discover", label: "Discover" },
+                            { href: "/fund", label: "Fund/Support" },
+                            { href: "/hire", label: "Hire Talent" },
+                            { href: "/apply", label: "Join the List" },
+                            { href: "/newsletter", label: "Newsletter" },
+                        ].map((item, index) => (
+                            <li key={index} className="my-4">
+                                <Link
+                                    href={item.href}
+                                    className="text-lg font-semibold hover:underline hover:text-slate-300 transition"
+                                >
+                                    {item.label}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
             </div>
@@ -75,7 +59,7 @@ export default function Drawer() {
             {/* Overlay */}
             {isOpen && (
                 <div
-                    className="fixed inset-0 bg-opacity-50"
+                    className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm"
                     onClick={toggleDrawer}
                 ></div>
             )}

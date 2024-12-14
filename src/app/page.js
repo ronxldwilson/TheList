@@ -40,7 +40,7 @@ export default function Home() {
             <div className="mt-4">
               <Link href="/apply">
                 <button className="bg-blue-500 text-white py-3 px-4 shadow-xl rounded-lg w-full hover:bg-gray-200 hover:text-black md:w-auto">
-                  Apply to be on the list
+                  Join The List
                 </button>
               </Link>
             </div>
