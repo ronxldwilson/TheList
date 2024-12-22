@@ -153,8 +153,8 @@ export default function Hire () {
         <table className='w-full  rounded-3xl bg-white  shadow-md'>
           <thead>
             <tr className=' text-gray-700'>
-              {/* <th className=' p-3'>Star</th> */}
-              {/* <th className=' p-3'>Votes</th> */}
+              <th className=' p-3'>Star</th>
+              <th className=' p-3'>Votes</th>
               <th className=' p-3'>Name</th>
               <th className=' p-3'>Role</th>
               <th className=' p-3'>Experience</th>
@@ -169,8 +169,8 @@ export default function Hire () {
                 key={index}
                 className='odd:bg-gray-50 even:bg-white hover:bg-gray-100 transition'
               >
-                {/* <td className='border border-gray-300 p-3'>{talent.star}</td> */}
-                {/* <td className='border border-gray-300 p-3'>{talent.upvotes}</td>   */}
+                <td className='border border-gray-300 p-3'>{talent.star}</td>
+                <td className='border border-gray-300 p-3'>{talent.upvotes}</td>  
                 <td className='border border-gray-300 p-3'>{talent.name}</td>
                 <td className='border border-gray-300 p-3'>{talent.role}</td>
                 <td className='border border-gray-300 p-3'>
