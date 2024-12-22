@@ -1,65 +1,135 @@
-import Drawer from '@/components/Drawer';
-import Link from 'next/link';
+import React from 'react'
+import Drawer from '@/components/Drawer'
+import CardComponent from '@/components/CardComponent'
+import Link from 'next/link'
+import profileData from '../../data/profileData'
 
-export default function Home() {
+const data = profileData
+
+const Home = () => {
   return (
     <>
-      <div className="relative h-screen bg-gradient-to-b from-pink-300 to-indigo-700 px-4">
-        {/* Drawer positioned at the top-left */}
-        <div className="absolute top-0 left-0">
-          <Drawer />
-        </div>
+      <Drawer />
 
-        {/* Centered content */}
-        <div className="flex flex-col items-center justify-center h-full">
-          <div className="bg-white shadow-lg rounded-lg p-6 sm:p-8 text-center max-w-full">
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-              The List
-            </h1>
-            <p className="text-gray-600 text-sm sm:text-base mb-6">
-              The List is a platform designed to help you discover, support, <br />
-              and hire exceptional individuals.
-            </p>
-            <div className="flex flex-col gap-3 sm:gap-4 md:flex-row md:justify-around md:space-x-2">
-              <Link href="/discover">
-                <button className="bg-blue-500 text-white py-3 px-4 shadow-xl hover:bg-gray-200 hover:text-black rounded-lg w-full md:w-auto">
-                  Discover
-                </button>
-              </Link>
-              <Link href="/fund">
-                <button className="bg-blue-500 text-white py-3 px-4 shadow-xl rounded-lg w-full hover:bg-gray-200 hover:text-black md:w-auto">
-                  Fund or Support
-                </button>
-              </Link>
-              <Link href="/hire">
-                <button className="bg-blue-500 text-white py-3 px-4 shadow-xl rounded-lg w-full hover:bg-gray-200 hover:text-black md:w-auto">
-                  Hire Talent
-                </button>
-              </Link>
-            </div>
-            <div className="mt-4">
-              <Link href="/apply">
-                <button className="bg-blue-500 text-white py-3 px-4 shadow-xl rounded-lg w-full hover:bg-gray-200 hover:text-black md:w-auto">
-                  Join The List
-                </button>
-              </Link>
-            </div>
-          </div>
-
-        {/* Footer */}
-        <div className="absolute bottom-1 w-full z-100 text-center text-white">
-          <p className="text-xs sm:text-sm">
-            The List is an open-source platform: Contribute to the project on{' '}
-            <Link
-              href="https://github.com/ronxldwilson/TheList"
-              className="text-gray-300 underline"
-            >
-              GitHub
-            </Link>
+      <div className='flex flex-col items-center justify-center min-h-screen'>
+        <div className='text-center'>
+          <h1 className='text-3xl font-semibold text-gray-800 mb-4'>
+            The List
+          </h1>
+          <p className='text-sm text-gray-600 mb-8  sm:w-[80%] md:w-[60%] lg:w-[50%] mx-auto'>
+            Discover and explore opportunities to connect with talented
+            individuals. The List is dedicated to fostering a community where
+            everyone can showcase their skills, access resources, and build
+            meaningful connections to fuel their success.
           </p>
         </div>
+        <div>
+          <div className='block lg:hidden'>{mobile()}</div>
+          <div className='hidden lg:block'>{notMobile()}</div>
+        </div>
+        <div>
         </div>
       </div>
     </>
-  );
+  )
 }
+
+const cardsData = [
+  {
+    name: 'Utkrisht Singh',
+    building: 'Building InTacht',
+    description:
+      'InTacht (Intelligent Global Infrastructure), which is basically a modern Cloud Runtime that enables startups to efficiently create & manage their own AI infrastructure like GPU clusters and integrate modern AI chips or custom hardware like ASICs &  FPGAs.',
+    pathToImage: '/images/utkrisht-singh/personImage.jpg'
+  },
+  {
+    name: 'asdasdasd',
+    building: 'Building 2',
+    description: 'Amazing view and amenities',
+    pathToImage: '/images/utkrisht-singh/personImage.jpg'
+  },
+  {
+    name: 'Mike Johnson',
+    building: 'Building 3',
+    description: 'Close to the park',
+    pathToImage: '/images/utkrisht-singh/personImage.jpg'
+  } // Added pathToImage
+]
+
+function notMobile () {
+  return (
+    <>
+      <div className='flex justify-between text-xl'>
+        <div>
+          {' '}
+          <b>Fund/Support </b>
+        </div>
+        <Link href='/fund'>
+          <div>
+            {' '}
+            <u> Checkout Full List </u>{' '}
+          </div>
+        </Link>
+      </div>
+      <div
+        className='w-full flex flex-wrap justify-center max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-4xl
+      shadow-xl rounded-lg p-6 border border-gray-100'
+      >
+        {data.map(personDetails => {
+          return (
+            <div key={personDetails.key}>
+              <Link href={`/fund/${personDetails.slug}`}>
+                <CardComponent
+                  name={personDetails.name}
+                  buildingInfo={personDetails.buildingInfo}
+                  cardSubContent={personDetails.cardSubContent}
+                  bannerImage={personDetails.bannerImage}
+                  profileImage={personDetails.profileImage}
+                />
+              </Link>
+            </div>
+          )
+        })}
+      </div>
+    </>
+  )
+}
+
+const SmallCard = ({ name, building, pathToImage }) => {
+  return (
+    <div className='flex items-center bg-gray-300 rounded-lg p-4 m-2 w-64'>
+      <div className='w-12 h-12 rounded-full mr-4'>
+        <img
+          src={pathToImage}
+          alt={name}
+          className='object-cover w-full h-full rounded-full'
+        />
+      </div>
+      <div className='flex flex-col'>
+        <div className='font-bold text-lg'>{name}</div>
+        <div className='text-sm text-gray-700'>{building}</div>
+      </div>
+    </div>
+  )
+}
+
+function mobile () {
+  return (
+    <div
+      className='w-full flex flex-wrap justify-center max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-4xl
+        bg-gray-50 shadow-md rounded-lg p-6 border border-gray-100'
+    >
+      {cardsData.map((card, index) => (
+        <SmallCard
+          key={index}
+          name={card.name}
+          building={card.building}
+          description={card.description}
+          pathToImage={card.pathToImage}
+        />
+      ))}
+    </div>
+  )
+}
+
+export default Home
