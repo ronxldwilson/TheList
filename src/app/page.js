@@ -3,6 +3,7 @@ import Drawer from '@/components/Drawer'
 import CardComponent from '@/components/CardComponent'
 import Link from 'next/link'
 import profileData from '../../data/profileData'
+import Image from 'next/image'
 
 const data = profileData
 
@@ -43,16 +44,16 @@ const cardsData = [
     pathToImage: '/images/utkrisht-singh/personImage.jpg'
   },
   {
-    name: 'asdasdasd',
-    building: 'Building 2',
-    description: 'Amazing view and amenities',
-    pathToImage: '/images/utkrisht-singh/personImage.jpg'
+    name: 'Akshay Kripalani',
+    building: 'Building Proxima Mumbai',
+    description: '',
+    pathToImage: '/images/akshay-kripalani/personImage.jpg'
   },
   {
     name: 'Mike Johnson',
     building: 'Building 3',
     description: 'Close to the park',
-    pathToImage: '/images/utkrisht-singh/personImage.jpg'
+    pathToImage: ''
   } // Added pathToImage
 ]
 
@@ -99,7 +100,7 @@ const SmallCard = ({ name, building, pathToImage }) => {
   return (
     <div className='flex items-center bg-gray-300 rounded-lg p-4 m-2 w-64'>
       <div className='w-12 h-12 rounded-full mr-4'>
-        <img
+        <Image
           src={pathToImage}
           alt={name}
           className='object-cover w-full h-full rounded-full'
