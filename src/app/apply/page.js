@@ -20,7 +20,7 @@ export default function Apply() {
             </button>
             </Link>
             
-            <Link href="/asdas">
+            <Link href="https://forms.gle/9sN9T2TF9iW2KZN76">
             <button className='bg-blue-500 m-3 text-white py-3 px-4 shadow-xl rounded-lg w-full md:w-auto'>
                 Job Seeker
             </button>
