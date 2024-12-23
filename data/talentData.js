@@ -1,3 +1,4 @@
+
 const talentData = [
     {
         id:"000001",
@@ -8,6 +9,7 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
+        star:true,
         date_added:""
     },{
         id:"000002",
@@ -18,6 +20,7 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
+        star:true,
         date_added:""
     },{
         id:"000003",
@@ -28,6 +31,7 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
+        star:true,
         date_added:""
     },{
         id:"000004",
@@ -38,6 +42,7 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
+        star:true,
         date_added:""
     },{
         id:"000005",
@@ -48,6 +53,7 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
+        star:true,
         date_added:""
     },{
         id:"000006",
@@ -58,6 +64,7 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
+        star:true,
         date_added:""
     },{
         id:"000007",
@@ -68,6 +75,7 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
+        star:true,
         date_added:""
     },{
         id:"000008",
@@ -78,6 +86,7 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
+        star:true,
         date_added:""
     },{
         id:"000009",
@@ -88,6 +97,7 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
+        star:true,
         date_added:""
     },{
         id:"000010",
@@ -98,6 +108,7 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
+        star:true,
         date_added:""
     }
 ]
