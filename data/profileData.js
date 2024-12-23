@@ -63,28 +63,23 @@ const profileData = [
     }
   },{
     key: 3,
-    slug: 'john-doe',
-    name: 'Apply to be on The List',
-    buildingInfo: `Building XYZ`,
-    cardSubContent: `Apply to get exposure and support from people who believe in your idea `,
-    bannerImage: '/images/sample/bannerImage.png',
-    profileImage: '/images/sample/personImage.png',
-    data_added: 'Lorem Ipsum',
+    slug: 'prashant-sharma',
+    name: 'Prashant Sharma',
+    buildingInfo: `Building FutureX Society`,
+    cardSubContent: `I’m creating a platform where people can learn skills, we’re also creating a community where they can execute ideas and grow together.`,
+    bannerImage: '/images/prashant-sharma/bannerImage.png',
+    profileImage: '/images/prashant-sharma/personImage.jpeg',
+    data_added: '23-12-2024',
     pageContent: {
       about_the_product:
-        'Magna eiusmod duis ut aute cillum irure ipsum Lorem aute laborum nostrud cillum irure. Tempor cillum dolore officia nisi non eu anim pariatur ex. Irure elit nostrud enim fugiat cupidatat. Proident dolor ex veniam cupidatat sit excepteur veniam consectetur. Anim minim laboris occaecat veniam excepteur pariatur magna anim dolore id dolor veniam quis. Voluptate laborum quis cillum dolore.',
+        `I’m creating a platform where people can learn skills that the education system misses, such as tech, personal finance, and personal branding—skills people are passionate about. We offer mentorship from top experts, not just courses. More importantly, we’re also creating a community where they can execute ideas and grow together. I started this because I gained many skills at a young age but lacked the support and environment needed, and I want to provide that for others.`,
       how_will_funds_be_used:
-        'Magna eiusmod duis ut aute cillum irure ipsum Lorem aute laborum nostrud cillum irure. Tempor cillum dolore officia nisi non eu anim pariatur ex. Irure elit nostrud enim fugiat cupidatat. Proident dolor ex veniam cupidatat sit excepteur veniam consectetur. Anim minim laboris occaecat veniam excepteur pariatur magna anim dolore id dolor veniam quis. Voluptate laborum quis cillum dolore.',
+        `The money will be used to build and improve the platform, making it a more effective place for students and mentors to connect. A portion will be used to onboard both students and mentors to grow our community. Marketing will help us reach a larger audience, attracting more users to the platform. Team salaries will ensure we have the right people to manage the platform, develop features, and support users. Office expenses will cover the costs of running our day-to-day operations efficiently, ensuring the business runs smoothly`,
       about_them:
-        'Magna eiusmod duis ut aute cillum irure ipsum Lorem aute laborum nostrud cillum irure. Tempor cillum dolore officia nisi non eu anim pariatur ex. Irure elit nostrud enim fugiat cupidatat. Proident dolor ex veniam cupidatat sit excepteur veniam consectetur. Anim minim laboris occaecat veniam excepteur pariatur magna anim dolore id dolor veniam quis. Voluptate laborum quis cillum dolore.',
-      funding_link: 'https://tally.so/r/wAWvqe',
+        `I'm 17 years old high school dropout from Chennai, Tamil Nadu (India) and my home town is Jaipur, Rajasthan (India).`,
+      funding_link: 'https://futuresociety.gumroad.com/l/cobee',
       socialLinks: {
-        linkedin: 'Lorem Ipsum',
-        mail: 'Lorem Ipsum',
-        twitter: 'Lorem Ipsum',
-        facebook: 'Lorem Ipsum',
-        instagram: 'Lorem Ipsum',
-        whatsapp: 'Lorem Ipsum'
+        twitter: 'https://x.com/drop_prashant',
       },
       money_recieved_till_today: ''
     }

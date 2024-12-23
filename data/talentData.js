@@ -5,7 +5,7 @@ const talentData = [
         name:"Placeholder Name",
         role:"Software Engineer",
         experience:5,
-        location:"Bengaluru", 
+        location:"Singapore", 
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
@@ -16,7 +16,7 @@ const talentData = [
         name:"Placeholder Name",
         role:"Software Engineer",
         experience:1,
-        location:"Bengaluru", 
+        location:"Singapore", 
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
@@ -31,7 +31,7 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
-        star:true,
+        star:false,
         date_added:""
     },{
         id:"000004",
@@ -42,7 +42,7 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
-        star:true,
+        star:false,
         date_added:""
     },{
         id:"000005",
@@ -53,7 +53,7 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
-        star:true,
+        star:false,
         date_added:""
     },{
         id:"000006",
@@ -97,14 +97,14 @@ const talentData = [
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,
-        star:true,
+        star:false,
         date_added:""
     },{
         id:"000010",
         name:"Placeholder Name",
         role:"Software Engineer",
         experience:15,
-        location:"Bengaluru", 
+        location:"Singapore", 
         proof_of_work_link:"https://fueler.io/ronxldwilson",
         social_link:"https://linkdein.com/ronxldwilson",
         upvotes:15,

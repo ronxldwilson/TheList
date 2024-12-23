@@ -135,8 +135,8 @@ function hireTable () {
       <table className='w-full  rounded-3xl bg-white  shadow-md'>
         <thead>
           <tr className=' text-gray-700'>
-            <th className=' p-3'>Star</th>
-            <th className=' p-3'>Votes</th>
+            <th className=' p-3'>Featured</th>
+            {/* <th className=' p-3'>Votes</th> */}
             <th className=' p-3'>Name</th>
             <th className=' p-3'>Role</th>
             <th className=' p-3'>Experience</th>
@@ -151,13 +151,13 @@ function hireTable () {
               key={index}
               className='odd:bg-gray-50 even:bg-white hover:bg-gray-100 transition'
             >
-              <td className='border border-gray-300 p-3'>
+              <td className='border border-gray-300 flex justify-center p-3'>
                 {talent.star ? <FaStar /> : <FaRegStar />}
               </td>
-              <td className='border border-gray-300 p-3'>{talent.upvotes}</td>
+              {/* <td className='border border-gray-300 p-3'>{talent.upvotes}</td> */}
               <td className='border border-gray-300 p-3'>{talent.name}</td>
               <td className='border border-gray-300 p-3'>{talent.role}</td>
-              <td className='border border-gray-300 p-3'>
+              <td className='border border-gray-300 p-3 text-center'>
                 {talent.experience}
               </td>
               <td className='border border-gray-300 p-3'>{talent.location}</td>

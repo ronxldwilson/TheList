@@ -53,7 +53,7 @@ export default function PersonPage () {
       {/* Your content here */}
 
       <div className='max-w-7xl hover:text-purple-900 mx-auto px-6'>
-        <Link href='/list' className='font-semibold mb-6 inline-block'>
+        <Link href='/fund' className='font-semibold mb-6 inline-block'>
           ← Back to the List
         </Link>
       </div>
