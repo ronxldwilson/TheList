@@ -13,7 +13,7 @@ export default function Apply() {
             </h1>
             
             <Link
-                href="https://tally.so/r/wAWvqe"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfMtyQFZo2DXsoFHyPosLtxzeot6TOMd74SfdZ-6iJRn5WkRQ/viewform"
             >
             <button className='bg-blue-500 m-3 text-white py-3 px-4 shadow-xl rounded-lg w-full md:w-auto'>
                 Builder
