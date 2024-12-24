@@ -8,7 +8,7 @@ export default function List () {
 
   return (
     <>
-      <div className='min-h-screen flex items-center justify-center relative bg-gradient-to-br from-indigo-400 via-pink-300 to-violet-400'>
+      <div className='min-h-screen flex items-center justify-center relative bg-gradient-to-br from-indigo-400 via-pink-300 to-violet-400 overflow-hidden'>
         <div className='absolute inset-0 bg-white opacity-20 mix-blend-overlay'></div>
         <Drawer />
         <div className='relative z-10'>
