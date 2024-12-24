@@ -811,18 +811,6 @@ const GrantsData = [
         'US middle and high school entrepreneurs. // Permanent Residents & US citizens. // Grants are given out on a rolling basis. Deadline, Nov 22nd. // Mention 1517 Fund as a referrer'
     }
   },
-  {
-    Name: 'The Formidable Fund',
-    Link: 'https://www.formidablefund.org/',
-    Amount: '$1k',
-    Category: 'Grants',
-    GivenTo: 'Individuals',
-    Institution: 'Formidable Fund',
-    Target: {
-      Notes:
-        'US middle and high school entrepreneurs. // Permanent Residents & US citizens. // Grants are given out on a rolling basis. Deadline, Nov 22nd. // Mention 1517 Fund as a referrer'
-    }
-  }
 ]
 
 export default GrantsData

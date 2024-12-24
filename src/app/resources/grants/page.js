@@ -5,16 +5,14 @@ const Grants = () => {
   return (
     <>
       <Drawer />
-      <div className="flex justify-center py-10 bg-gray-50">
-        <div className="w-[90%] lg:w-[80%] bg-white shadow-lg rounded-lg p-6">
+      <div className="flex justify-center py-10 ">
+        <div className="w-[90%] lg:w-[80%] bg-white shadow-2xl rounded-lg p-6">
           <h1 className="text-2xl font-semibold mb-6 text-center text-gray-800">
             Grants Directory
           </h1>
 
-          
-
           <div className="overflow-auto rounded-lg">
-            <table className="table-auto w-full text-left border-collapse">
+            <table className="table-auto text-xs w-full text-left border-collapse">
               <thead>
                 <tr className="bg-blue-100">
                   <th className="px-4 py-3 border font-semibold text-gray-700">
