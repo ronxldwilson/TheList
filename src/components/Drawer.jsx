@@ -37,7 +37,7 @@ export default function Drawer() {
                     <ul>
                         {[
                             { href: "/", label: "Home" },
-                            { href: "/discover", label: "Discover" },
+                            // { href: "/discover", label: "Discover" },
                             { href: "/fund", label: "Fund/Support" },
                             { href: "/hire", label: "Hire Talent" },
                             { href: "/apply", label: "Join the List" },

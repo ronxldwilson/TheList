@@ -1,426 +1,828 @@
-const grantsData = [
+const GrantsData = [
   {
-    Name: '1517 Medici Project',
-    Website: '1517 Medici Project',
-    GrantAmount: '$1,000',
-    GivenTo: 'Individual',
-    Institution: '1517 Fund'
+    Name: 'SPC Founder Fellowship:',
+    Link: 'https://www.southparkcommons.com/founder-fellowship',
+    Amount: '-',
+    Category: 'Fund',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes:
+        '\n$400,000 for 7% equity via SAFE, plus $600,000 in your next venture round.'
+    }
   },
   {
-    Name: '776 Fellowship',
-    Website: 'https://www.776.org/',
-    GrantAmount: '$100,000',
-    GivenTo: 'N/A',
-    Institution: '776 Foundation'
+    Name: 'Antler ',
+    Link: 'https://www.antler.co/residency',
+    Amount: '-',
+    Category: 'Fund',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
   },
   {
-    Name: 'Activate Fellowship',
-    Website: 'https://www.activate.org/apply/#what-we-look-for-1',
-    GrantAmount: '$280k - $395k',
-    GivenTo: 'Individual, Companies',
-    Institution: 'Activate Global Inc.'
+    Name: 'Leap Year',
+    Link: 'https://www.takeleapyear.com/',
+    Amount: '-',
+    Category: 'First Believer Fund',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
   },
   {
-    Name: 'Activate Fellowship',
-    Website: 'https://www.activate.org/the-fellowship',
-    GrantAmount: '$100K',
-    GivenTo: 'N/A',
-    Institution: 'N/A'
+    Name: 'Malpani Ventures',
+    Link: 'https://www.malpaniventures.com/',
+    Amount: '-',
+    Category: 'Grant ',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes:
+        'Rs 1 lakh grants to builders who build and share in public,and are creating open-source projects that make life better for Indians !'
+    }
   },
   {
-    Name: 'Adamnite Microgrants',
-    Website: 'https://adamnite.org/pages/grant',
-    GrantAmount: '$1000 or more',
-    GivenTo: 'N/A',
-    Institution: 'Adamnite Labs'
-  },
-  {
-    Name: 'AI Agents Global Challenge',
-    Website: 'https://www.aiagentschallenge.com/',
-    GrantAmount: '$5k - $500k',
-    GivenTo: 'Companies, Individual',
-    Institution: 'MM01 AI'
-  },
-  {
-    Name: 'Antikythera Studio',
-    Website: 'https://antikythera.org/studios',
-    GrantAmount: '$5k',
-    GivenTo: 'Individual',
-    Institution: 'Berggruen Institute'
-  },
-  {
-    Name: 'Aspen Tech Policy Hub',
-    Website: 'aspentechpolicyhub.org/nonprofit-and-public-interest-fellowship/',
-    GrantAmount: '$50,000 challenge prize',
-    GivenTo: 'Nonprofit',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'Awesome Foundation',
-    Website: 'https://www.awesomefoundation.org/en',
-    GrantAmount: '$1K/month',
-    GivenTo: 'Individuals/orgs',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'Brains',
-    Website: 'https://spec.tech/brains',
-    GrantAmount: 0,
-    GivenTo: 'N/A',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'Civics Unplugged',
-    Website: 'https://www.civicsunplugged.org/',
-    GrantAmount: 'N/A',
-    GivenTo: 'N/A',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'Cosmos',
-    Website: 'https://cosmosinstitute.substack.com',
-    GrantAmount: '$1K - $10K',
-    GivenTo: 'Individuals',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'DojoGrants',
-    Website: 'https://dojo.nucleate.xyz/dojogrants',
-    GrantAmount: 'up to $8000 USD',
-    GivenTo: 'Individual',
-    Institution: 'Nucleate Dojo'
-  },
-  {
-    Name: 'EA Funds',
-    Website: 'https://funds.effectivealtruism.org/apply-for-funding',
-    GrantAmount: '$5,000-$200,000',
-    GivenTo: 'N/A',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'Edge City Fellowship',
-    Website: 'https://wiki.edgecity.live/fellowship',
-    GrantAmount: 'N/A',
-    GivenTo: 'Individual',
-    Institution: 'Gary Sheng'
-  },
-  {
-    Name: 'Emergent Ventures',
-    Website: 'https://www.mercatus.org/emergent-ventures',
-    GrantAmount: ">$5,000 (we've heard of people getting up to $250K)",
-    GivenTo: 'N/A',
-    Institution: 'Mercatus Center'
-  },
-  {
-    Name: 'Emergent Ventures India',
-    Website: 'https://www.mercatus.org/emergent-ventures',
-    GrantAmount: '>$5,000',
-    GivenTo: 'N/A',
-    Institution: 'Mercatus Center'
-  },
-  {
-    Name: 'Fast Grants',
-    Website: 'Fast Grants',
-    GrantAmount: '$10,000-$500,000',
-    GivenTo: 'N/A',
-    Institution: 'Fast Grants'
-  },
-  {
-    Name: 'Foresight Fellowship',
-    Website: 'https://foresight.org/',
-    GrantAmount: 'N/A',
-    GivenTo: 'N/A',
-    Institution: 'Foresight Institute'
-  },
-  {
-    Name: 'Gitcoin Grants',
-    Website: 'Gitcoin Grants',
-    GrantAmount: 'N/A',
-    GivenTo: 'N/A',
-    Institution: 'Gitcoin'
-  },
-  {
-    Name: 'Henry Arnhold Fellowship',
-    Website: 'https://www.mulagofoundation.org/henry-fellows-program',
-    GrantAmount: '$100k',
-    GivenTo: 'Non-Profits, Companies',
-    Institution: 'Mulago Foundation'
-  },
-  {
-    Name: 'Inflection Grants',
-    Website: 'https://www.inflectiongrants.com/',
-    GrantAmount: '$2,000',
-    GivenTo: 'N/A',
-    Institution: 'Cyan Banister'
-  },
-  {
-    Name: 'Longevity Fellowship',
-    Website: 'https://www.longbiofellowship.org/',
-    GrantAmount: 'N/A',
-    GivenTo: 'N/A',
-    Institution: 'LessDeath Inc'
-  },
-  {
-    Name: 'Magnificent Grants (Hummingbird)',
-    Website: 'Magnificent Grants',
-    GrantAmount: '$100,000',
-    GivenTo: 'N/A',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'Moth Fund',
-    Website: 'https://www.mothfund.com/',
-    GrantAmount: 'N/A',
-    GivenTo: 'N/A',
-    Institution: 'Molly Mielke'
-  },
-  {
-    Name: 'Nadia Asparouhova',
-    Website:
-      'https://medium.com/@nayafia/how-to-give-away-5-000-on-the-internet-66cae906ab7e',
-    GrantAmount: 'N/A',
-    GivenTo: 'N/A',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'New Science',
-    Website: 'https://newscience.org/',
-    GrantAmount: 'N/A',
-    GivenTo: 'N/A',
-    Institution: 'Jaan Tallin & Vitalik'
-  },
-  {
-    Name: 'Next Generation Internet 0',
-    Website: 'https://nlnet.nl/funding.html',
-    GrantAmount: '$5k - $50k',
-    GivenTo:
-      'Individual, Non-Profits, Companies',
-    Institution: 'NLnet Foundation'
-  },
-  {
-    Name: 'Non Trivial',
-    Website: 'https://www.non-trivial.org/',
-    GrantAmount: '$15K',
-    GivenTo: 'All',
-    Institution: 'Peter McIntyre (Founder)'
-  },
-  {
-    Name: 'O’Shaughnessy Fellowship',
-    Website: "O'Shaughnessy Fellowships",
-    GrantAmount: '$100,000',
-    GivenTo: 'N/A',
-    Institution: "O'Shaughnessy Ventures"
-  },
-  {
-    Name: 'O’Shaughnessy Grants',
-    Website: 'https://www.osv.llc/oshaughnessy-fellowships',
-    GrantAmount: '$10k',
-    GivenTo: 'Individual',
-    Institution: 'O’Shaughnessy Ventures'
-  },
-  {
-    Name: 'Open Grants',
-    Website: 'https://www.opengrants.io/',
-    GrantAmount: 'N/A',
-    GivenTo: 'N/A',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'Promise Prize',
-    Website: 'promiseprize.org (email teams@promiseprize.org)',
-    GrantAmount: '$250,000',
-    GivenTo:
-      'Non-profit or forprofit',
-    Institution: 'Atrum'
-  },
-  {
-    Name: 'Protostars',
-    Website: 'https://www.blackbird.vc/programs/protostars',
-    GrantAmount: '$1k',
-    GivenTo: 'Individual',
-    Institution: 'Blackbird Foundation'
-  },
-  {
-    Name: 'Rainer Arnhold Fellowship',
-    Website: 'https://www.mulagofoundation.org/rainer-fellows-program',
-    GrantAmount: '$100k',
-    GivenTo: 'Non-Profits, Companies',
-    Institution: 'Mulago Foundation'
-  },
-  {
-    Name: 'Rise Program',
-    Website: 'https://www.risefortheworld.org/',
-    GrantAmount: 'N/A',
-    GivenTo: 'N/A',
-    Institution: 'Schmidt & Rhodes'
-  },
-  {
-    Name: 'Schmidt Futures',
-    Website: 'https://www.schmidtfutures.com/',
-    GrantAmount: 'N/A',
-    GivenTo: 'N/A',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'SciFounder Fellowship',
-    Website:
-      'https://www.janestreet.com/join-jane-street/programs-and-events/graduate-research-fellowship/',
-    GrantAmount: '$400k',
-    GivenTo: 'Companies',
-    Institution: 'SciFounders'
-  },
-  {
-    Name: 'Silicon Valley Fellowship',
-    Website: 'https://www.siliconvalleyfellowship.com/',
-    GrantAmount: '$1k - $5k',
-    GivenTo: 'Individual',
-    Institution: 'Gomry Next Gen Fund'
-  },
-  {
-    Name: 'Slavin Foundation',
-    Website: 'http://slavinfoundation.org/',
-    GrantAmount: 'N/A',
-    GivenTo: 'Students',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'Survival and Flourishing Fund',
-    Website: 'https://survivalandflourishing.fund/',
-    GrantAmount: 'N/A',
-    GivenTo: 'N/A',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'Telora',
-    Website: 'https://telora.com/',
-    GrantAmount: '$40K',
-    GivenTo:
-      'Individual, teams, or company',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'Thiel Fellowship',
-    Website: 'Thiel Fellowship',
-    GrantAmount: '$100,000',
-    GivenTo: 'Individual',
-    Institution: 'Thiel Foundation'
-  },
-  {
-    Name: 'Vibefund',
-    Website: 'https://vibe.camp/vibefund/',
-    GrantAmount: '$500-N/A',
-    GivenTo: 'N/A',
-    Institution: 'Vibecamp'
+    Name: 'Grad Capital',
+    Link: 'https://www.gradcapital.in/',
+    Amount: '-',
+    Category: 'Grant ',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
   },
   {
     Name: 'WTFund',
-    Website: 'https://www.allthingswtf.com/wtfund',
-    GrantAmount: '~$25,000 (USD)',
-    GivenTo: 'Indian entity',
-    Institution: 'WTF Podcast'
+    Link: 'https://www.allthingswtf.com/wtfund',
+    Amount: '-',
+    Category: 'Grant ',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes:
+        'WTFund is India’s premiere non-dilutive grant fund for emerging entrepreneurs. We are bringing together high-potential founders, creators, makers, and dreamers under 25 and offering them a structured growth opportunity.'
+    }
   },
   {
-    Name: 'Z Fellows',
-    Website: 'Z Fellows',
-    GrantAmount: '$10,000 investment',
-    GivenTo:
-      'Individuals & Companies',
-    Institution: 'Cory Levy'
+    Name: 'EVM Capital(',
+    Link: '\nhttps://www.evm.capital/',
+    Amount: '-',
+    Category: 'Grant ',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes:
+        '\nwe fund passionate and driven individuals with microgrants ranging from $100 to $1000.'
+    }
   },
   {
-    Name: 'Local Host',
-    Website: 'https://offlocalhost.xyz/',
-    GrantAmount: '$1K - $100K',
-    GivenTo:
-      'Individuals & Companies',
-    Institution: 'KG Ventures'
-  },
-  {
-    Name: 'Roddenberry Catalyst',
-    Website: 'https://roddenberryfoundation.org/our-work/catalyst-fund/',
-    GrantAmount: '$2.5k - $15k',
-    GivenTo:
-      'Individuals, Companies & Non Profits',
-    Institution: 'Rodenberry Foundation'
-  },
-  {
-    Name: 'HackClub',
-    Website: 'https://hackclub.com/',
-    GrantAmount: 'N/A',
-    GivenTo: 'N/A',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'General Catalyst Venture Fellows',
-    Website: 'https://www.generalcatalyst.com/venture-fellows',
-    GrantAmount: '$2.5k',
-    GivenTo: 'Individuals',
-    Institution: 'General Catalyst'
-  },
-  {
-    Name: 'Cactus Capital',
-    Website: 'https://cactuscapital.org/',
-    GrantAmount: '$50 - $100',
-    GivenTo: 'Individuals',
-    Institution: 'N/A'
-  },
-  {
-    Name: 'CryoDAO',
-    Website: 'https://www.cryodao.org/fellowship',
-    GrantAmount: '$100 - $3,000',
-    GivenTo: 'Individuals',
-    Institution: 'CryoDAO'
-  },
-  {
-    Name: 'Go Human',
-    Website: 'http://gohuman.fund/',
-    GrantAmount: '$100',
-    GivenTo: 'Individuals',
-    Institution: 'Go Human! Fund'
+    Name: '1517 Fund Medici Grant ',
+    Link: 'https://www.1517fund.com/medici-project(',
+    Amount: '-',
+    Category: 'Grant ',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
   },
   {
     Name: 'Bagel Fund',
-    Website: 'https://bagel.fund',
-    GrantAmount: '$100-$500',
+    Link: 'https://bagel.fund',
+    Amount: '-',
+    Category: 'Grant ',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'Gaur & Chopra Escape Velocity Grant',
+    Link: 'https://invertedpassion.com/escape-velocity-grant/',
+    Amount: '-',
+    Category: 'Grant ',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'Inflection Grant',
+    Link: 'https://justinmares.com/apply-for-an-trajectory-change-grant/',
+    Amount: '-',
+    Category: 'Grant ',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'Merge Club Guide',
+    Link: '\nhttps://merge.club/guide',
+    Amount: '-',
+    Category: 'Resources',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'C4E SoG Grant',
+    Link: 'https://saurabhgarg.com/the-sog-grant-draft/. ',
+    Amount: '-',
+    Category: 'Grant ',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'Nagarathna Memorial Grant',
+    Link: 'https://thejeshgn.com/projects/nagarathna-memorial-grant/',
+    Amount: '-',
+    Category: 'Grant ',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'Magnificent Grants',
+    Link: 'https://www.magnificentgrants.com/(',
+    Amount: '-',
+    Category: 'Grant ',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'The Residency',
+    Link: 'https://www.livetheresidency.com/',
+    Amount: '-',
+    Category: 'Hacker House',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: '776 Fellowship',
+    Link: 'https://www.776.org/',
+    Amount: '$100,000',
+    Category: 'Fellowship',
+    GivenTo: '-',
+    Institution: '776 Foundation',
+    Target: {
+      Notes: 'young people tackling climate change'
+    }
+  },
+  {
+    Name: 'Activate Fellowship',
+    Link: 'https://www.activate.org/apply/#what-we-look-for-1',
+    Amount: '$280k - $395k',
+    Category: 'Fellowship',
+    GivenTo: 'Individual, Companies',
+    Institution: 'Activate Global Inc.',
+    Target: {
+      Notes: 'We empower scientists to reinvent the world'
+    }
+  },
+  {
+    Name: 'Activate Fellowship',
+    Link: 'https://www.activate.org/the-fellowship',
+    Amount: '$100K',
+    Category: 'Fellowship',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'Adamnite Microgrants',
+    Link: 'https://adamnite.org/pages/grant',
+    Amount: '$1000 or more',
+    Category: 'Grant ',
+    GivenTo: '-',
+    Institution: 'Adamnite Labs',
+    Target: {
+      Notes:
+        'The microgrant program is open to all university students who are interested in building on Web3 and want to try out a new platform that is specifically geared toward them. Get mentorship and focused guidance as you work to launch your project side by side with Adamnite.'
+    }
+  },
+  {
+    Name: 'AI Agents Global Challenge',
+    Link: 'https://www.aiagentschallenge.com/',
+    Amount: '$5k - $500k',
+    Category: '-',
+    GivenTo: 'Companies, Individual',
+    Institution: 'MM01 AI',
+    Target: {
+      Notes:
+        'International challenge to develop solutions that harness the power of AI in creating AI agents [for] practical, real-world applications'
+    }
+  },
+  {
+    Name: 'Antikythera Studio',
+    Link: 'https://antikythera.org/studios',
+    Amount: '$5k',
+    Category: '-',
+    GivenTo: 'Individual',
+    Institution: 'Berggruen Institute',
+    Target: {
+      Notes:
+        '[Antikyther studio] will select 12-18 interdisciplinary, full time Studio Researchers–including engineers, designers, scientists, philosophers, writers and technologists–to develop speculative prototypes & propositions'
+    }
+  },
+  {
+    Name: 'Aspen Tech Policy Hub',
+    Link: 'aspentechpolicyhub.org/nonprofit-and-public-interest-fellowship/',
+    Amount: '$50,000 challenge prize',
+    Category: 'Fellowship',
+    GivenTo: 'Nonprofit',
+    Institution: '-',
+    Target: {
+      Notes:
+        'Up to $50k challenge prize to nonprofits admitted in our nonprofit policy training fellowship; $6k stipend '
+    }
+  },
+  {
+    Name: 'Awesome Foundation',
+    Link: 'https://www.awesomefoundation.org/en',
+    Amount: '$1K/month',
+    Category: 'Grant',
+    GivenTo: 'Individuals/orgs',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'Brains',
+    Link: 'https://spec.tech/brains',
+    Amount: '-',
+    Category: 'Accelerator/Fellowship',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes:
+        'Like YCombinator for coordinated research programs. No funding, but 13 week training program with 2 in-person events. On Demo Day, pitch your program to partners interested in funding research programs or hiring research leader'
+    }
+  },
+  {
+    Name: 'Civics Unplugged',
+    Link: 'https://www.civicsunplugged.org/',
+    Amount: '-',
+    Category: 'Programs',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'Cosmos',
+    Link: 'https://cosmosinstitute.substack.com',
+    Amount: '$1K - $10K',
+    Category: 'Funding Projects',
     GivenTo: 'Individuals',
-    Institution: 'Bagel Fund'
+    Institution: '-',
+    Target: {
+      Notes:
+        'Scientific researchers. Cosmos Ventures: fast grants for prototyping in the philosophy of technology https://cosmosventures.org || Cosmos Fellowship: grants supporting the best builders and thinkers in Philosophy/Tech https://cosmosinstitute.substack.com'
+    }
+  },
+  {
+    Name: 'DojoGrants',
+    Link: 'https://dojo.nucleate.xyz/dojogrants',
+    Amount: 'up to $8000 USD',
+    Category: 'Grants',
+    GivenTo: 'Individual',
+    Institution: 'Nucleate Dojo',
+    Target: {
+      Notes:
+        'The first institution-agnostic, year-round life sciences research funding program for undergrads.'
+    }
+  },
+  {
+    Name: 'EA Funds',
+    Link: 'https://funds.effectivealtruism.org/apply-for-funding',
+    Amount: '$5,000-$200,000',
+    Category: 'Grants',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes:
+        'project you think will improve the world, and it seems like a good fit for one of our funds'
+    }
+  },
+  {
+    Name: 'Edge City Fellowship',
+    Link: 'https://wiki.edgecity.live/fellowship',
+    Amount: '-',
+    Category: 'Fellowship',
+    GivenTo: 'Individual',
+    Institution: 'Gary Sheng',
+    Target: {
+      Notes:
+        'empowers young innovators across domains critical for human flourishing [via] a full-ride to a month-long immersive co-living experience'
+    }
+  },
+  {
+    Name: 'Emergent Ventures',
+    Link: 'https://www.mercatus.org/emergent-ventures',
+    Amount: '>$5,000 (we have heard of people getting up to $250K)',
+    Category: 'Grant',
+    GivenTo: '-',
+    Institution: 'Mercatus Center',
+    Target: {
+      Notes:
+        'support entrepreneurs with highly scalable, “zero to one” ideas for meaningfully improving society.'
+    }
+  },
+  {
+    Name: 'Fast Grants',
+    Link: 'Fast Grants',
+    Amount: '$10,000-$500,000',
+    Category: 'Grant',
+    GivenTo: '-',
+    Institution: 'Fast Grants',
+    Target: {
+      Notes:
+        'scientist at an academic institution currently working on a COVID-19 related project and in need of funding'
+    }
+  },
+  {
+    Name: 'Foresight Fellowship',
+    Link: 'https://foresight.org/',
+    Amount: '-',
+    Category: 'Fellowship',
+    GivenTo: '-',
+    Institution: 'Foresight Institute',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'Gitcoin Grants',
+    Link: 'Gitcoin Grants',
+    Amount: '-',
+    Category: 'Grants',
+    GivenTo: '-',
+    Institution: 'Gitcoin',
+    Target: {
+      Notes: 'Discover and Fund Public Goods'
+    }
+  },
+  {
+    Name: 'Henry Arnhold Fellowship',
+    Link: 'https://www.mulagofoundation.org/henry-fellows-program',
+    Amount: '$100k',
+    Category: 'Fellowship',
+    GivenTo: 'Non-Profits, Companies',
+    Institution: 'Mulago Foundation',
+    Target: {
+      Notes:
+        'we find leaders with promising conservation and climate solutions and help them to design and deliver them at scale'
+    }
+  },
+  {
+    Name: 'Longevity Fellowship',
+    Link: 'https://www.longbiofellowship.org/',
+    Amount: '-',
+    Category: 'Fellowship',
+    GivenTo: '-',
+    Institution: 'LessDeath Inc',
+    Target: {
+      Notes:
+        'The Longevity Biotech Fellowship Program for new members is 12-weeks of orientation, connection, and mentorship to equip people with the right context and opportunities to make an impact on aging'
+    }
+  },
+  {
+    Name: 'Moth Fund',
+    Link: 'https://www.mothfund.com/',
+    Amount: '-',
+    Category: 'Fund',
+    GivenTo: '-',
+    Institution: 'Molly Mielke',
+    Target: {
+      Notes:
+        'early-stage-focused venture capital firm that aims to increase the agency of extraordinary individuals using both investment dollars and grants'
+    }
+  },
+  {
+    Name: 'Nadia Asparouhova',
+    Link: 'https://medium.com/@nayafia/how-to-give-away-5-000-on-the-internet-66cae906ab7e',
+    Amount: '-',
+    Category: 'Grant',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: 'Maybe it was $5,000 only once'
+    }
+  },
+  {
+    Name: 'New Science',
+    Link: 'https://newscience.org/',
+    Amount: '-',
+    Category: 'Fellowship',
+    GivenTo: '-',
+    Institution: 'Jaan Tallin & Vitalik ',
+    Target: {
+      Notes:
+        'Each fellow receives a stipend of $6,000 per month, as well as $5,000 per month for project costs and $25,000 in computational credits.'
+    }
+  },
+  {
+    Name: 'Next Generation Internet ',
+    Link: 'https://nlnet.nl/funding.html',
+    Amount: '$5k - $50k',
+    Category: 'Funding Projects',
+    GivenTo:
+      'Individual, Non-Profits, Companies',
+    Institution: 'NLnet Foundation',
+    Target: {
+      Notes:
+        'We support projects that contribute to an open, resilient, trustworthy, sustainable and human-centered internet.'
+    }
+  },
+  {
+    Name: 'Non Trivial',
+    Link: 'https://www.non-trivial.org/',
+    Amount: '$15K',
+    Category: 'Programs',
+    GivenTo: 'All ',
+    Institution: 'Peter McIntyre (Founder)',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'O’Shaughnessy Fellowship',
+    Link: "O'Shaughnessy Fellowships",
+    Amount: '$100,000',
+    Category: 'Fellowship',
+    GivenTo: '-',
+    Institution: "O'Shaughnessy Ventures",
+    Target: {
+      Notes: 'for ambitious people who want to build something great. '
+    }
+  },
+  {
+    Name: 'O’Shaughnessy Grants',
+    Link: 'https://www.osv.llc/oshaughnessy-fellowships',
+    Amount: '$10k',
+    Category: 'Grant',
+    GivenTo: 'Individual',
+    Institution: 'O’Shaughnessy Ventures',
+    Target: {
+      Notes:
+        '20 individuals will each receive $10k & access to OSV’s network [..] Winners will be selected from their Fellowship Application.\n'
+    }
+  },
+  {
+    Name: 'Open Grants',
+    Link: 'https://www.opengrants.io/',
+    Amount: '-',
+    Category: 'Grants',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'Promise Prize',
+    Link: 'promiseprize.org (email teams@promiseprize.org)',
+    Amount: '$250,000',
+    Category: '-',
+    GivenTo: 'Non-profit or forprofit',
+    Institution: 'Atrum',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'Protostars',
+    Link: 'https://www.blackbird.vc/programs/protostars',
+    Amount: '$1k',
+    Category: 'Grant',
+    GivenTo: 'Individual',
+    Institution: 'Blackbird Foundation',
+    Target: {
+      Notes:
+        "We're giving young people $1k for their passion projects! We're looking for the wildest hearts with the wildest ideas and projects."
+    }
+  },
+  {
+    Name: 'Rainer Arnhold Fellowship',
+    Link: 'https://www.mulagofoundation.org/rainer-fellows-program',
+    Amount: '$100k',
+    Category: 'Fellowship',
+    GivenTo: 'Non-Profits, Companies',
+    Institution: 'Mulago Foundation',
+    Target: {
+      Notes:
+        'we find leaders with promising poverty solutions and help them to design and deliver them at scale'
+    }
+  },
+  {
+    Name: 'Rise Program',
+    Link: 'https://www.risefortheworld.org/',
+    Amount: '-',
+    Category: 'Fellowship',
+    GivenTo: '-',
+    Institution: 'Schmidt & Rhodes',
+    Target: {
+      Notes:
+        'The program starts at ages 15–17 and offers benefits including scholarships, mentorship, access to career development opportunities, funding, and more as Global Winners work toward solving humanity’s most pressing problems.'
+    }
+  },
+  {
+    Name: 'Schmidt Futures',
+    Link: 'https://www.schmidtfutures.com/',
+    Amount: '-',
+    Category: 'Funds Projects',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'SciFounder Fellowship',
+    Link: 'https://www.janestreet.com/join-jane-street/programs-and-events/graduate-research-fellowship/',
+    Amount: '$400k',
+    Category: 'Fellowship',
+    GivenTo: 'Companies',
+    Institution: 'SciFounders',
+    Target: {
+      Notes:
+        'help more technical teams run their own companies. At least one founder should have started working full-time for the company [..] care most about the quality of the founders and try to be agnostic about ideas'
+    }
+  },
+  {
+    Name: 'Silicon Valley Fellowship',
+    Link: 'https://www.siliconvalleyfellowship.com/',
+    Amount: '$1k - $5k',
+    Category: 'Fellowship',
+    GivenTo: 'Individual',
+    Institution: 'Gomry Next Gen Fund',
+    Target: {
+      Notes:
+        'The SVF is a program to get fast-tracked into Silicon Valley through a community of experienced Silicon Valley mentors, talks & events in SV + online'
+    }
+  },
+  {
+    Name: 'Slavin Foundation',
+    Link: 'http://slavinfoundation.org/',
+    Amount: '-',
+    Category: 'Fellowship',
+    GivenTo: 'Students',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'Survival and Flourishing Fund',
+    Link: 'https://survivalandflourishing.fund/',
+    Amount: '-',
+    Category: 'Grant',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'Telora',
+    Link: 'https://telora.com/',
+    Amount: '$40K',
+    Category: 'Fellowship',
+    GivenTo:
+      'Individual, teams, or company',
+    Institution: '-',
+    Target: {
+      Notes: 'Young people willing to move to Miami for 6 months. '
+    }
+  },
+  {
+    Name: 'Thiel Fellowship',
+    Link: 'Thiel Fellowship',
+    Amount: '$100,000',
+    Category: 'Fellowship',
+    GivenTo: 'Individual',
+    Institution: 'Thiel Foundation',
+    Target: {
+      Notes: '16 - 22 years old'
+    }
+  },
+  {
+    Name: 'Vibefund',
+    Link: 'https://vibe.camp/vibefund/',
+    Amount: '$500--',
+    Category: '-',
+    GivenTo: '-',
+    Institution: 'Vibecamp',
+    Target: {
+      Notes:
+        'financial support, networking, and counseling for members of the vibecamp community to help them make progress on creative, technical, and professional projects.'
+    }
+  },
+  {
+    Name: 'Z Fellows',
+    Link: 'Z Fellows',
+    Amount: '$10,000 investment',
+    Category: 'First Believer',
+    GivenTo: 'Individuals & Companies',
+    Institution: 'Cory Levy',
+    Target: {
+      Notes:
+        'We’ll give you $10,000 to go all in on your project or idea for one week. Join a cohort of early technical thinkers and learn from some of Silicon Valley’s smartest mentors.'
+    }
+  },
+  {
+    Name: 'Local Host',
+    Link: 'https://offlocalhost.xyz/',
+    Amount: '$1K - $100K',
+    Category: 'Fellowship',
+    GivenTo: 'Individuals & Companies',
+    Institution: 'KG Ventures\n',
+    Target: {
+      Notes:
+        'Driven ambitious GenZ builders willing to go all-in on their ideas. Grants - $1-5k. Investments - upto $100k. Partners - Kei Hayashi & Jay Shankarpure. Jayant Raj (Twitter @jayantr7) can make intros. Also, they now do $1-100K checks for GenZ builders.'
+    }
+  },
+  {
+    Name: 'Roddenberry Catalyst',
+    Link: 'https://roddenberryfoundation.org/our-work/catalyst-fund/',
+    Amount: '$2.5k - $15k',
+    Category: 'Fund',
+    GivenTo:
+      'Individuals, Companies & Non Profits',
+    Institution: 'Rodenberry Foundation',
+    Target: {
+      Notes:
+        'Early Stage ＋ Big Ideas ＋ Bold Vision. Catalyst supports projects from anywhere in the world by individuals, teams, non-profits, or social enterprises.'
+    }
+  },
+  {
+    Name: 'HackClub',
+    Link: 'https://hackclub.com/',
+    Amount: '-',
+    Category: 'Club',
+    GivenTo: '-',
+    Institution: '-',
+    Target: {
+      Notes: '-'
+    }
+  },
+  {
+    Name: 'General Catalyst Venture Fellows',
+    Link: 'https://www.generalcatalyst.com/venture-fellows',
+    Amount: '$2.5k',
+    Category: 'Fellowship',
+    GivenTo: 'Individuals',
+    Institution: 'General Catalyst',
+    Target: {
+      Notes:
+        'We\'re here to help you get your company from first draft to final draft. If you\'re a student working on a startup, apply here to be considered for an investment from GC Venture Fellows! We only invest in student-run companies (including startups with at least one founder who graduated in the past 12 months)'
+    }
+  },
+  {
+    Name: 'Cactus Capital',
+    Link: 'https://cactuscapital.org/',
+    Amount: '$50 - $100',
+    Category: 'Grants',
+    GivenTo: 'Individuals',
+    Institution: '-',
+    Target: {
+      Notes:
+        'we\'re high schoolers from northern virginia looking to fund cool projects. We provide student builders with microgrants of $50-100 to help them get started. You can be at any stage with your project, it can even be just an idea you have. We don\'t want equity; but if you make it big, all we ask is that you let us borrow your jet.'
+    }
+  },
+  {
+    Name: 'CryoDAO',
+    Link: 'https://www.cryodao.org/fellowship',
+    Amount: '$100 - $3,000',
+    Category: 'Fellowship',
+    GivenTo: 'Individuals',
+    Institution: 'CryoDAO',
+    Target: {
+      Notes:
+        'The CryoDAO Fellowship aims to empower individuals with need-based grants to become more deeply involved in the field of cryopreservation. These grants will support activities such as research, education, conference attendance, and joining relevant programs or fellowships.'
+    }
+  },
+  {
+    Name: 'Go Human',
+    Link: 'http://gohuman.fund/',
+    Amount: '$100',
+    Category: 'Fund',
+    GivenTo: 'Individuals',
+    Institution: 'Go Human! Fund',
+    Target: {
+      Notes:
+        'We give smol checks to help young go! Building smth cool- Hit the dm\'s. We\'re here to help u go go go! :)'
+    }
+  },
+  {
+    Name: 'Bagel Fund',
+    Link: 'https://bagel.fund',
+    Amount: '$100-$500',
+    Category: 'Grants',
+    GivenTo: 'Individuals',
+    Institution: 'Bagel Fund',
+    Target: {
+      Notes: '-'
+    }
   },
   {
     Name: 'Merge Grant',
-    Website:
-      'https://odteam.notion.site/Merge-Grant-7eadfac121ae45328c80cd3a733fb2ab',
-    GrantAmount: '$50 - $1k',
+    Link: 'https://odteam.notion.site/Merge-Grant-7eadfac121ae45328c80cd3a733fb2ab',
+    Amount: '$50 - $1k',
+    Category: 'Grants',
     GivenTo: 'Individuals',
-    Institution: 'Ari Dutilh & Julian Weisser'
+    Institution: 'Ari Dutilh & Julian Weisser',
+    Target: {
+      Notes:
+        'amplify and accelerate projects born out of goldilocks periods like the one mentioned above. We also wanted to try and kick off these goldilocks projects for people no matter their point in time'
+    }
   },
   {
     Name: 'Polar Fellowship',
-    Website: 'https://www.polaris-fellowship.com/',
-    GrantAmount: 'N/A',
+    Link: 'https://www.polaris-fellowship.com/',
+    Amount: '-',
+    Category: 'Fellowship',
     GivenTo: 'Individuals',
-    Institution: 'Entrepreneur First'
+    Institution: 'Entrepreneur First',
+    Target: {
+      Notes:
+        'Polaris is running in Oxford, Cambridge and London. It is not limited to students studying at universities in these places, however participants must be able to attend weekly cohort meetings in-person. // Polaris is a 9 month programme built to give you and 24 other exceptional fellows just such an environment. To help you think concretely about the path you want to take we will take you through a curated curriculum of books, essays, and talks. We give you money to spend on projects (be it for materials, hosting, or content), and (when needed) we support you with thoughtful guidance. // The programme is open to talented people, from high school dropouts to final year PhDs. We are happy to welcome undergraduates, recent graduates, Masters and PhD students and external applicants onto the Polaris programme.'
+    }
   },
   {
     Name: 'Foundry',
-    Website: 'https://www.blackbird.vc/foundry',
-    GrantAmount: '$1k - $5k',
+    Link: 'https://www.blackbird.vc/foundry',
+    Amount: '$1k - $5k',
+    Category: 'Program',
     GivenTo: 'Companies',
-    Institution: 'Blackbird'
+    Institution: 'Blackbird',
+    Target: {
+      Notes:
+        'researchers with ties to Australia or NZ who want to learn about starting a company. 5k cash prize for winning team at the end of a cohort'
+    }
   },
   {
     Name: 'Breakthrough Energy Fellows',
-    Website: 'https://befellows.smapply.org/',
-    GrantAmount: '$50k - $500k',
+    Link: 'https://befellows.smapply.org/',
+    Amount: '$50k - $500k',
+    Category: 'Fellowship',
     GivenTo: 'Individuals',
-    Institution: 'Bill Gates'
+    Institution: 'Bill Gates',
+    Target: {
+      Notes:
+        'Our flagship program, the Innovator Fellowship, is designed to accelerate the development of promising early-stage climate technologies // '
+    }
   },
   {
     Name: 'The Formidable Fund',
-    Website: 'https://www.formidablefund.org/',
-    GrantAmount: '$1k',
+    Link: 'https://www.formidablefund.org/',
+    Amount: '$1k',
+    Category: 'Grants',
     GivenTo: 'Individuals',
-    Institution: 'Formidable Fund'
+    Institution: 'Formidable Fund',
+    Target: {
+      Notes:
+        'US middle and high school entrepreneurs. // Permanent Residents & US citizens. // Grants are given out on a rolling basis. Deadline, Nov 22nd. // Mention 1517 Fund as a referrer'
+    }
+  },
+  {
+    Name: 'The Formidable Fund',
+    Link: 'https://www.formidablefund.org/',
+    Amount: '$1k',
+    Category: 'Grants',
+    GivenTo: 'Individuals',
+    Institution: 'Formidable Fund',
+    Target: {
+      Notes:
+        'US middle and high school entrepreneurs. // Permanent Residents & US citizens. // Grants are given out on a rolling basis. Deadline, Nov 22nd. // Mention 1517 Fund as a referrer'
+    }
   }
 ]
 
-export default grantsData;
+export default GrantsData

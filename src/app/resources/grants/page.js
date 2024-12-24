@@ -10,6 +10,9 @@ const Grants = () => {
           <h1 className="text-2xl font-semibold mb-6 text-center text-gray-800">
             Grants Directory
           </h1>
+
+          
+
           <div className="overflow-auto rounded-lg">
             <table className="table-auto w-full text-left border-collapse">
               <thead>
@@ -24,10 +27,16 @@ const Grants = () => {
                     Grant Amount
                   </th>
                   <th className="px-4 py-3 border font-semibold text-gray-700">
-                    Monies to
+                    Category
+                  </th>
+                  <th className="px-4 py-3 border font-semibold text-gray-700">
+                    Given To
                   </th>
                   <th className="px-4 py-3 border font-semibold text-gray-700">
                     Institution
+                  </th>
+                  <th className="px-4 py-3 border font-semibold text-gray-700">
+                    Notes
                   </th>
                 </tr>
               </thead>
@@ -43,9 +52,9 @@ const Grants = () => {
                       {grant.Name || 'N/A'}
                     </td>
                     <td className="px-4 py-2 border text-gray-600">
-                      {grant.Website ? (
+                      {grant.Link ? (
                         <a
-                          href={grant.Website}
+                          href={grant.Link}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-blue-500 underline hover:text-blue-700"
@@ -57,13 +66,19 @@ const Grants = () => {
                       )}
                     </td>
                     <td className="px-4 py-2 border text-gray-600">
-                      {grant.GrantAmount  || 'N/A'}
+                      {grant.Amount  || 'N/A'}
+                    </td>
+                    <td className="px-4 py-2 border text-gray-600">
+                      {grant.Category || 'N/A'}
                     </td>
                     <td className="px-4 py-2 border text-gray-600">
                       {grant.GivenTo || 'N/A'}
                     </td>
                     <td className="px-4 py-2 border text-gray-600">
                       {grant.Institution || 'N/A'}
+                    </td>
+                    <td className="px-4 py-2 border text-gray-600">
+                      {grant.Target.Notes || 'N/A'}
                     </td>
                   </tr>
                 ))}
