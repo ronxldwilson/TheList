@@ -55,7 +55,7 @@ const profileData = [
 `,
       about_them:
         'The founding members are all 19 and based in Mumbai, India. ',
-      funding_link: '',
+      funding_link: 'https://buymeacoffee.com/proximamumbai',
       socialLinks: {
         twitter: 'https://x.com/akshay_krips',
       },
