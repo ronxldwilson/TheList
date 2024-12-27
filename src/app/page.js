@@ -80,7 +80,7 @@ const cardsData = [
   {
     name: 'Akshay Kripalani',
     building: 'Building Proxima Mumbai',
-    description: '',
+    description: 'Proxima is a Mumbai based hyper-curated community of builders and founders alike. We host hackathons, demo days and co-working meetups. We are currently 50+ members strong with talented founders in the community, like Armaan Dhanda, Harsh Agarwal, and Dhravya Shah.',
     pathToImage: '/images/akshay-kripalani/personImage.jpg',
     link:'/fund/akshay-kripalani'
   },
