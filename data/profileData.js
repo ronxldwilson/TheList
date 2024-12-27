@@ -90,7 +90,7 @@ We have also hosted Dawn Horizon Summit, a showcase event for DawnAR - A start-u
       <strong>Akshay Kripalani:</strong> Lead AI developer at Torch.
     </li>
   </ul>`,
-      funding_link: '',
+      funding_link: 'https://buymeacoffee.com/proximamumbai',
       socialLinks: {
         twitter: 'https://x.com/akshay_krips'
       },
