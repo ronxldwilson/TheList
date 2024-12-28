@@ -75,24 +75,25 @@ We have also hosted Dawn Horizon Summit, a showcase event for DawnAR - A start-u
 </ul>
  
 `,
-      about_them: `<h2 style="font-size: 30px">Co-Founders:</h2>
-  <p>
-    <strong>Yash Panditrao</strong> and <strong>Manthan Maheshwari</strong>: Co-Founders at 
-    <a href="https://twitter.com/RaiseGate" target="_blank" style="color: blue;">@RaiseGate</a>. Bridging the gap between early-stage startups and venture capital firms with data-driven tools.
-  </p>
-  
-  <h2 style="font-size: 30px">Team Members:</h2>
+      about_them: `
+        <h2>Founding Team</h2>
   <ul>
     <li>
-      <strong>Shlok Parab:</strong> Lead web developer at Torch.
+      <strong>Yash Panditrao</strong> and <strong>Manthan Maheshwari</strong>: 
+    Co-Founders at <a href="https://twitter.com/RaiseGate" style="color:blue" target="_blank">@RaiseGate</a>.
+      Bridging the gap between early-stage startups and venture capital firms with data-driven tools.
     </li>
     <li>
-      <strong>Akshay Kripalani:</strong> Lead AI developer at Torch.
+      <strong>Shlok Parab</strong>: Lead Web Developer at Torch.
     </li>
-  </ul>`,
+    <li>
+      <strong>Akshay Kripalani</strong>: Lead AI Developer at Torch.
+    </li>
+  </ul>
+`,
       funding_link: 'https://buymeacoffee.com/proximamumbai',
       socialLinks: {
-        twitter: 'https://x.com/akshay_krips'
+        twitter: 'https://x.com/ProximaMumbai'
       },
       money_recieved_till_today: ''
     }
