@@ -42,7 +42,7 @@ export default function Drawer() {
                             { href: "/hire", label: "Hire Talent" },
                             { href: "/apply", label: "Join the List" },
                             { href: "/resources", label: "Resources" },
-                            { href: "/newsletter", label: "Newsletter" },
+                            // { href: "/newsletter", label: "Newsletter" },
                         ].map((item, index) => (
                             <li key={index} className="my-4">
                                 <Link
