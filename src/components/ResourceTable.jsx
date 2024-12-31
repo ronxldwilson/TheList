@@ -1,7 +1,9 @@
 const ResourceTable = () => {
     const resources = [
         { name: 'VC Funds, Fellowship Programs and Grants', link: '/resources/funding' },
-        { name: 'Job Platforms' , link: '/resources/job-platforms'}
+        { name: 'Job Platforms' , link: '/resources/job-platforms'},
+        { name: 'Design Resources (Coming Soon)' , link: ''},
+        { name: 'Developer Resources (Coming Soon)' , link: ''}
     ];
 
     return (

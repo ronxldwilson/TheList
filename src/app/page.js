@@ -1,8 +1,10 @@
 import React from 'react'
 import Drawer from '@/components/Drawer'
+import JoinList from '@/components/JoinList'
 import CardComponent from '@/components/CardComponent'
 import Link from 'next/link'
 import profileData from '../../data/profileData'
+import talentData from '../../data/talentData'
 import Image from 'next/image'
 import { FaStar, FaRegStar } from 'react-icons/fa'
 import ResourceTable from '@/components/ResourceTable'
@@ -13,10 +15,11 @@ const Home = () => {
   return (
     <>
       <Drawer />
+      <JoinList />
 
       <div className='flex flex-col items-center justify-center min-h-screen overflow-hidden'>
         <div className='text-center'>
-          <h1 className='text-lg md:text-3xl font-semibold text-gray-800 mt-4 mb-4'>
+          <h1 className='text-lg md:text-3xl font-semibold text-gray-800 mt-10 mb-4'>
             The List
           </h1>
           <p className='text-sm md:text-lg text-gray-600 mb-8  sm:w-[80%] md:w-[60%] lg:w-[50%] mx-auto px-3'>
@@ -94,45 +97,7 @@ const cardsData = [
 ]
 
 function hireTable () {
-  const filteredData = [
-    {
-      id: '000001',
-      name: 'Placeholder Name',
-      role: 'Software Engineer',
-      experience: 5,
-      location: 'Bengaluru',
-      proof_of_work_link: 'https://fueler.io/ronxldwilson',
-      social_link: 'https://linkedin.com/ronxldwilson',
-      upvotes: 15,
-      star: true,
-      date_added: ''
-    },
-    {
-      id: '000002',
-      name: 'Placeholder Name',
-      role: 'Software Engineer',
-      experience: 1,
-      location: 'Bengaluru',
-      proof_of_work_link: 'https://fueler.io/ronxldwilson',
-      social_link: 'https://linkedin.com/ronxldwilson',
-      upvotes: 15,
-      star: false,
-      date_added: ''
-    },
-    {
-      id: '000003',
-      name: 'Placeholder Name',
-      role: 'Content Writer',
-      experience: 6,
-      location: 'Bengaluru',
-      proof_of_work_link: 'https://fueler.io/ronxldwilson',
-      social_link: 'https://linkedin.com/ronxldwilson',
-      upvotes: 15,
-      star: true,
-      date_added: ''
-    }
-  ]
-
+  const filteredData = talentData
   return (
     <div className='overflow-x-auto w-full'>
       <table className='min-w-full bg-white shadow-md rounded-lg text-sm px-2'>

@@ -20,13 +20,13 @@ const talentData = [
         proof_of_work_link: "https://fueler.io/sharvin",
         social_link: "https://www.linkedin.com/in/sharvin-shitole-057175205/",
         upvotes: 0,
-        star: false,
+        star: true,
         date_added: ""
     },
     {
         id: "000003",
         name: "Ronald Wilson",
-        role: "Developer",
+        role: "Full Stack Developer",
         experience: 2.5,
         location: "Bengaluru - remote",
         proof_of_work_link: "https://github.com/ronxldwilson/",
@@ -44,7 +44,7 @@ const talentData = [
         proof_of_work_link: "www.subhadip.me",
         social_link: "https://linkedin.com/in/subhadipsahaofficial",
         upvotes: 0,
-        star: false,
+        star: true,
         date_added: ""
     },
     {
@@ -56,7 +56,7 @@ const talentData = [
         proof_of_work_link: "https://fueler.io/nikhilnema",
         social_link: "https://www.linkedin.com/in/nikhilnema/",
         upvotes: 0,
-        star: false,
+        star: true,
         date_added: ""
     },
     {
@@ -68,7 +68,7 @@ const talentData = [
         proof_of_work_link: "fueler.io/heyaharshu",
         social_link: "https://x.com/heyaharshu",
         upvotes: 0,
-        star: false,
+        star: true,
         date_added: ""
     }
 ];
