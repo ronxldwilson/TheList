@@ -2,6 +2,7 @@ import CardComponent from '@/components/CardComponent'
 import profileData from '../../../data/profileData'
 import Link from 'next/link'
 import Drawer from '@/components/Drawer'
+import JoinList from '@/components/JoinList'
 
 export default function List () {
   const data = profileData
@@ -11,6 +12,7 @@ export default function List () {
       <div className='min-h-screen flex items-center justify-center relative bg-gradient-to-br from-indigo-400 via-pink-300 to-violet-400 overflow-hidden'>
         <div className='absolute inset-0 bg-white opacity-20 mix-blend-overlay'></div>
         <Drawer />
+        <JoinList />
         <div className='relative z-10'>
           <div className='bg-white m-10 rounded-lg p-10'>
             {/* Header Section */}

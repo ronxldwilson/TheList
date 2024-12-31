@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Drawer from '@/components/Drawer'
+import JoinList from '@/components/JoinList'
 import talentData from '../../../data/talentData'
 import { FaFilter } from 'react-icons/fa'
 import { FaStar, FaRegStar } from 'react-icons/fa'
@@ -39,6 +40,7 @@ export default function Hire () {
     <div className='flex flex-col lg:flex-row min-h-screen bg-gradient-to-b from-indigo-500 to-pink-300 '>
       {/* Sidebar Drawer */}
       <Drawer />
+      <JoinList />
 
       {/* Filter Section for Larger Screens */}
       <div className='hidden lg:block lg:w-1/4 w-full h-full lg:mt-36 ml-2 p-4 bg-white rounded-lg shadow-md'>
