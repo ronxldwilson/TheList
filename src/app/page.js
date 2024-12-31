@@ -19,7 +19,7 @@ const Home = () => {
 
       <div className='flex flex-col items-center justify-center min-h-screen overflow-hidden'>
         <div className='text-center'>
-          <h1 className='text-lg md:text-3xl font-semibold text-gray-800 mt-15 mb-4'>
+          <h1 className='text-lg md:text-3xl font-semibold text-gray-800 mt-16 mb-4'>
             The List
           </h1>
           <p className='text-sm md:text-lg text-gray-600 mb-8  sm:w-[80%] md:w-[60%] lg:w-[50%] mx-auto px-3'>
