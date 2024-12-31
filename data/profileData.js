@@ -25,7 +25,7 @@ const profileData = [
       `,
       about_them:
         'I’m Utkrisht, a 19 Y/o college dropped out from Lucknow, India.',
-      funding_link: '',
+      funding_link: 'https://buymeacoffee.com/koq_utx',
       socialLinks: {
         twitter: 'https://x.com/koq_utx'
       },
