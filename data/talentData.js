@@ -41,7 +41,7 @@ const talentData = [
         role: "Developer",
         experience: 1,
         location: "Remote",
-        proof_of_work_link: "www.subhadip.me",
+        proof_of_work_link: "https://thatdevguy.in",
         social_link: "https://linkedin.com/in/subhadipsahaofficial",
         upvotes: 0,
         star: true,
